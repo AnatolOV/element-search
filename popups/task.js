@@ -6,6 +6,7 @@ let suc = document.querySelector("#modal_success");
 
 let closeW = document.querySelector(".modal__close");
 closeW.onclick = function () {
+
   win.className = "modal";
 }
 
