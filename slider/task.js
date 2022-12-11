@@ -25,7 +25,7 @@ arrowBack.onclick = () => {
   }
   changeSlide(iAct);
 };
-classList.contains("slider__item_active")
+
 function changeSlide(index) {
   const indexOfActiveSlide = slides.findIndex((slide) => slide.classList.contains("slider__item_active"));
   slides[indexOfActiveSlide].classList.remove("slider__item_active");

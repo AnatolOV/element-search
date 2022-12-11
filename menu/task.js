@@ -2,7 +2,10 @@
 let menuClases = document.querySelectorAll(".menu__link");
 for (let i = 0; i < menuClases.length; i++) {
   let link = menuClases[i];
-  link.onclick = function () {    
+  let menuSingle = link.closest(".menu__item").querySelector(".menu");
+  
+  link.onclick = function () { 
+    if(menuSingle) {  
     if (link.closest(".menu__item").querySelector(".menu").classList.contains("menu_active")) {    
     link.closest(".menu__item").querySelector(".menu_sub").className = "menu menu_sub";
     return false;
@@ -11,8 +14,10 @@ for (let i = 0; i < menuClases.length; i++) {
       link.closest(".menu__item").querySelector(".menu_sub").className = "menu menu_sub menu_active";
       return false;
     } 
-  };   
+  }
 }
+}  
+
 /*
 //Рабочий, но кривой вариант 2...
 let menuClases = document.querySelectorAll(".menu__link");
